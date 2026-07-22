@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  border-radius: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.counter .count {
+  font-weight: bold;
+  font-size: 70px;
+  transition: color 0.3s;
+}
+.counter .buttons {
+  display: flex;
+  gap: 15px;
+}
+.counter .buttons button {
+  padding: 10px 22px;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+.counter .buttons button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.counter .buttons .increase {
+  background: #4caf50;
+}
+.counter .buttons .reset {
+  background: #f0ad4e;
+}
+.counter .buttons .decrease {
+  background: #f44336;
+}
+@media (max-width: 576px) {
+  .counter {
+    width: 90%;
+    padding: 25px 20px;
+  }
+  .counter .count {
+    font-size: 55px;
+  }
+  .counter .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .counter .buttons button {
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+  }
+}
